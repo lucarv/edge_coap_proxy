@@ -4,10 +4,12 @@ It allows a coap device to be observed and subsequently sending telemetry to the
 
 ## Instructions
 
-1. Clone this repo and create a docker image using the included Dockerfile. 
-2. Upload the image to an image repository (you can use docker hub or create a private repo in Azure) Provision an edge device by following this [tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart-linux)
-3. In the section _Deploy a module_, enter the details for this module (ignore item 7)
-4. Edit the Container Creation Options. COAP's default port is 5863, and you need to expose it in your host. Enter the string   
+1. Clone this repo  
+2. Install the dependencies with _npm install_
+3. Create a docker image using the included Dockerfile.
+4. Upload the image to an image repository (you can use docker hub or create a private repo in Azure) Provision an edge device by following this [tutorial](https://docs.microsoft.com/en-us/azure/iot-edge/quickstart-linux)
+5. In the section _Deploy a module_, enter the details for this module (ignore item 7)
+6. Edit the Container Creation Options. COAP's default port is 5863, and you need to expose it in your host. Enter the string   
 **"{\"HostConfig\":{\"PortBindings\":{\"5863/udp\":[{\"HostPort\":\"5863\"}]}}}"**  
 to expose the COAP Port
 5. Start your COAP device (the FW needs to implement the OBSERVE funcion).  
