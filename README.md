@@ -1,5 +1,5 @@
-# edge_coap_proxy
-This app can be used to create an azure iot edge module that acts as a coap proxy.  
+# What is this?
+An app that can be used to create an azure iot edge module that acts as a coap proxy.  
 It allows a coap device to be observed and subsequently sending telemetry to the proxy module.  
 
 ## Instructions
